@@ -1,0 +1,60 @@
+{
+  "name": "karavan",
+  "version": "3.18.6",
+  "private": true,
+  "scripts": {
+    "copy-designer": "cp -r ../../../../karavan-designer/src/designer src && cp -r ../../../../karavan-designer/src/kamelets src && cp -r ../../../../karavan-designer/src/components src && cp -r ../../../../karavan-designer/src/eip src",
+    "start": "npm run copy-designer && react-scripts start",
+    "build": "npm run copy-designer && react-scripts build",
+    "prod": "npm run copy-designer && react-scripts build --dest && rsync -a build/* ../resources/META-INF/resources"
+  },
+  "proxy": "http://127.0.0.1:8080/",
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@monaco-editor/react": "4.3.1",
+    "@patternfly/patternfly": "4.215.1",
+    "@patternfly/react-charts": "^6.92.0",
+    "@patternfly/react-core": "4.239.0",
+    "@patternfly/react-table": "^4.108.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/uuid": "^8.3.4",
+    "axios": "^0.25.0",
+    "buffer": "^6.0.3",
+    "dagre": "^0.8.5",
+    "file-saver": "^2.0.5",
+    "html-to-image": "^1.10.8",
+    "karavan-core": "file:../../../../karavan-core",
+    "keycloak-js": "^19.0.1",
+    "localforage": "^1.10.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.0",
+    "rxjs": "^7.5.2",
+    "typescript": "^4.5.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/dagre": "^0.7.47",
+    "@types/file-saver": "^2.0.5",
+    "@types/localforage": "0.0.34",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "monaco-editor": "0.29.1"
+  }
+}

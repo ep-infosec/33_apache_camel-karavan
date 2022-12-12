@@ -1,0 +1,14 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+.DS_Store
+.idea
+yarn-error.log
+webview/designer
+webview/components
+webview/kamelets
+webview/core
+webview/eip
+.vscode-test-web
